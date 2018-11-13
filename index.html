@@ -23,27 +23,27 @@
 						</a>
 					</div>
 					<div class="Nav__item GlobalNav__live">
-						<a href="/live" class="Nav__link">
+						<a href="/" class="Nav__link">
 							<span class="Nav__label">Build Your Plan</span>
 						</a>
 					</div>
 					<div class="Nav__item GlobalNav__live">
-						<a href="/live" class="Nav__link">
+						<a href="/" class="Nav__link">
 							<span class="Nav__label">Library</span>
 						</a>
 					</div>
 					<div class="Nav__item GlobalNav__my-stuff">
-						<a href="/my-stuff" class="Nav__link">
+						<a href="/" class="Nav__link">
 							<span class="Nav__label">Features</span>
 						</a>
 					</div>
 					<div class="Nav__item GlobalNav__search">
-						<a href="/search" class="Nav__link">
+						<a href="/" class="Nav__link">
 							<span class="Nav__label">Pricing</span>
 						</a>
 					</div>
 					<div class="Nav__item GlobalNav__search">
-						<a href="/search" class="Nav__link">
+						<a href="/" class="Nav__link">
 							<span class="Nav__label">FAQS</span>
 						</a>
 					</div>
@@ -65,26 +65,26 @@
 		</header>
 		<div class="container">
 			<div class="hb-form-wrap" id="hb-form-wrap">
-				<form id="planbuilder" class="hb-form hb-form-full" autocomplete="off">
+				<form id="planbuilder" class="hb-form hb-bull-full" autocomplete="off">
 					<ol class="hb-fields">
 						<li data-input-trigger>
 							<label class="hb-field-label hb-anim-upper">The way I like to watch is </label>
 							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
 								<option value="" disabled selected></option>
-								<option value="right" >I scroll through a guide and watch what’s on now.</option>
+								<option value="right" >I scroll through a guide and watch what’s on now. </option>
 								<option value="wrong">I search out whatever I want.</option>
-								<option value="right" >I do both.</option>
+								<option value="right" >Typing what I want, but also watching whatever’s on (sometimes).</option>
 							</select>
 						</li>
 						
 						<li data-input-trigger>
-							<label class="hb-field-label hb-anim-upper">But, I want to watch</label>
-							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
+							<label class="hb-field-label hb-anim-upper">But, I gotta see</label>
+							<select  id="question" class="cs-select cs-skin-border hb-anim-lower saywhat">
 								<option value="" disabled selected></option>
-								<option value="right" >Sports - my teams need me.</option>
+								<option value="right" >Sports — my teams need me</option>
 								<option value="right" >News - gotta stay informed.</option>
 								<option value="right" >Emmys, Grammys, Oscars, Tonys - EGOT all the way.</option>
-								<option value="wrong">It's 2018, I decide when to watch, not the other way around.</option>
+								<option value="wrong">Nothing. It’s 2019 - I watch on my time. </option>
 							</select>
 							<!-- <label class="hb-field-label hb-anim-upper">as it happens.</label> -->
 						</li>
@@ -103,17 +103,17 @@
 								<option value="" disabled selected></option>
 								<option value="right" >Game of Thrones, Silicon Valley, Westworld, that sorta thing.</option>
 								<option value="right" >Whatever’s on HBO, MAX, Showtime, and Starz.</option>
-								<option value="wrong">I’m good with the basics.</option>
+								<option value="wrong">Nothing fancy - I’m good with the basics.</option>
 							</select>
 						</li>
 						<li data-input-trigger>
-							<label class="hb-field-label hb-anim-upper">It would be also great if I could </label>
+							<label class="hb-field-label hb-anim-upper">I need my streaming service to let me</label>
 							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
 								<option value="" disabled selected></option>
-								<option value="right" >Record entire seasons on DVR to watch over and over.</option>
-								<option value="right">Watch The Handmaid’s Tale on my tablet, while the rest of the house watches Frozen downstairs.</option>
-								<option value="right" >Both.</option>
-								<option value="wrong">Dunk a basketball.</option>
+								<option value="right">DVR entire seasons to watch over and over. </option>
+								<option value="right">Watch on any device.</option>
+								<option value="right">DVR and watch on any device</option>
+								<option value="wrong">Watch shows, movies, and my budget.</option>
 							</select>
 						</li>
 
@@ -137,7 +137,7 @@
 										<li><img src="img/check.svg"/>Live sports, live events, breaking newse</li>
 									</ul>
 								</div>	
-								<h3 class="tryagain">Not for you? <a href="#" title="">Try again</a> or <a href="/plans" title="">see all plans</a></h3>
+								<h3 class="tryagain">Not for you? <a href="/" title="">Try again</a> or <a href="/plans" title="">see all plans</a></h3>
 							</div>
 						</div>
 						<div class="addremove">
@@ -225,11 +225,14 @@
 							            </label>
 							            <input name="product" value="14.99" type="checkbox" id="p3" onclick="totalIt()"/>
 						        	</div>
+
 						    		</form>
 						 		</fieldset>
 						        
 						</div>
-						<div class="stickyTotal GlobalNav ">
+						<div class="stickyTotal GlobalNav">
+							<div class="front"></div>
+							<div class="addremove">
 							<ul>
 								<li><label>
 						                Total 
@@ -238,6 +241,7 @@
 						        </li>
 								<li><a href="#" title="">Select This Package</a></li>
 							</ul>
+						</div>
 					    </div>
 					</div>
 					
@@ -268,6 +272,10 @@
 						classie.add( document.body, 'overview' ); // for demo purposes only
 					}
 				} );
+
+				var myvariable = document.createTextNode('as it happens.');
+				document.getElementsByClassName('saywhat')[0].appendChild(myvariable);
+				document.getElementsByClassName('saywhat').style.color = "blue";
 			})();
 
 			function totalIt() {

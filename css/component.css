@@ -36,13 +36,13 @@
 }
 
 /* Views (fullscreen and overview)*/
-.hb-form-full {
+.hb-bull-full {
 	top: 32%;
 	margin: 0 auto;
 	width: 70%;
 }
 
-.hb-form-full,
+.hb-bull-full,
 .hb-message-error {
 	max-width: 960px;
 }
@@ -95,7 +95,7 @@
 } /* we need to use top here because otherwise all our fixed elements will become absolute */
 
 /* Visibility control of elements */
-.hb-form-full .hb-fields > li,
+.hb-bull-full .hb-fields > li,
 .hb-nav-dots, 
 .hb-progress,
 .hb-numbers,
@@ -105,7 +105,7 @@ button.hb-continue,
 	visibility: hidden;
 }
 
-.no-js .hb-form-full .hb-fields > li {
+.no-js .hb-bull-full .hb-fields > li {
 	visibility: visible;
 }
 
@@ -159,7 +159,7 @@ button.hb-continue,
 	z-index: 999;
 }
 
-.js .hb-form-full .hb-fields > li {
+.js .hb-bull-full .hb-fields > li {
 	position: absolute;
 	width: 100%;
 }
@@ -184,7 +184,7 @@ button.hb-continue,
 	color: black;
 }
 
-.hb-form-full .hb-fields > li label[data-info]::after {
+.hb-bull-full .hb-fields > li label[data-info]::after {
 	position: relative;
 	display: inline-block;
 	margin-left: 10px;
@@ -205,7 +205,7 @@ button.hb-continue,
 	pointer-events: auto;
 }
 
-.hb-form-full .hb-fields > li label[data-info]::before {
+.hb-bull-full .hb-fields > li label[data-info]::before {
     position: absolute;
     bottom: 100%;
    	left: 0;
@@ -222,14 +222,14 @@ button.hb-continue,
     pointer-events: none;
 }
 
-.hb-form-full .hb-fields > li label[data-info]:hover::before {
+.hb-bull-full .hb-fields > li label[data-info]:hover::before {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
 
-.hb-form-full .hb-fields > li label:hover ~ .hb-info,
-.hb-form-full .hb-fields > li .hb-info:hover {
+.hb-bull-full .hb-fields > li label:hover ~ .hb-info,
+.hb-bull-full .hb-fields > li .hb-info:hover {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);

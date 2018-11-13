@@ -77,7 +77,7 @@
 		// current field position
 		this.current = 0;
 
-		this.old = -1;
+		// this.old = -1;
 
 		// all fields
 		this.fields = [].slice.call( this.fieldsList.children );
@@ -88,7 +88,7 @@
 		// show first field
 		classie.add( this.fields[ this.current ], 'hb-current' );
 
-		classie.add( this.fields[ this.current  ], 'hb-old' );
+		// classie.add( this.fields[ this.current  ], 'hb-old' );
 
 		// create/add controls
 		this._addControls();
@@ -260,7 +260,7 @@
 		// also add class "hb-show" to the next field and the class "hb-hide" to the current one
 		classie.remove( currentFld, 'hb-current' );
 		classie.add( currentFld, 'hb-hide' );
-		classie.add( currentFld, 'hb-old' );
+		// classie.add( currentFld, 'hb-old' );
 		
 		if( !this.isLastStep ) {
 			// update nav
@@ -290,8 +290,8 @@
 					self._hideCtrl( self.ctrlProgress );
 					// self._hideCtrl( self.ctrlContinue );
 					self._hideCtrl( self.ctrlFldStatus );
-					// replace class hb-form-full with hb-form-overview
-					classie.remove( self.formEl, 'hb-form-full' );
+					// replace class hb-bull-full with hb-form-overview
+					classie.remove( self.formEl, 'hb-bull-full' );
 					classie.add( self.formEl, 'hb-form-overview' );
 					classie.add( self.formEl, 'hb-show' );
 					// callback

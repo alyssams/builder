@@ -1,0 +1,37 @@
+ @font-face {
+    font-family: 'graphik-light';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Light-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Light-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Light-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Light.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'graphik-extralight';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Extralight-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Extralight-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Extralight-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Extralight.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'graphik-medium';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Medium-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Medium-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Medium-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Medium.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'graphik-regular';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Regular-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Regular-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Regular-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'graphik-semibold';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Semibold-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Semibold-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Semibold-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Semibold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: 'graphik-bold';
+    src:url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Bold-Web.eot') format('embedded-opentype'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Bold-Web.woff') format('woff'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Bold-Web.woff2') format('woff2'), url('https://assetshuluimcom-a.akamaihd.net/FONTS/Graphik-Bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+  }

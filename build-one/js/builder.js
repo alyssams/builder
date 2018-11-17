@@ -77,8 +77,6 @@
 		// current field position
 		this.current = 0;
 
-		// this.old = -1;
-
 		// all fields
 		this.fields = [].slice.call( this.fieldsList.children );
 		
@@ -87,8 +85,6 @@
 		
 		// show first field
 		classie.add( this.fields[ this.current ], 'hb-current' );
-
-		// classie.add( this.fields[ this.current  ], 'hb-old' );
 
 		// create/add controls
 		this._addControls();
@@ -191,8 +187,6 @@
 						} ); 
 						break;
 
-					
-					// for our custom select we would do something like:
 					case 'div' : 
 						[].slice.call( fld.querySelectorAll( 'ul > li' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'click', function(ev) { self._nextField(); } );
@@ -239,11 +233,17 @@
 		// current field
 		var currentFld = this.fields[ this.current ];
 
+
+
+
 		// save the navigation direction
 		this.navdir = backto !== undefined ? backto < this.current ? 'prev' : 'next' : 'next';
 
 		// update current field
 		this.current = backto !== undefined ? backto : this.current + 1;
+
+		// update previous field
+		this.previous = backto !== undefined ? backto : this.current - 1;
 
 		if( backto === undefined ) {
 			// update progress bar (unless we navigate backwards)
@@ -253,6 +253,8 @@
 			this.farthest = this.current;
 		}
 
+		var previousFld = this.fields[ this.previous ];
+
 		// add class "hb-display-next" or "hb-display-prev" to the list of fields
 		classie.add( this.fieldsList, 'hb-display-' + this.navdir );
 
@@ -260,7 +262,8 @@
 		// also add class "hb-show" to the next field and the class "hb-hide" to the current one
 		classie.remove( currentFld, 'hb-current' );
 		classie.add( currentFld, 'hb-hide' );
-		// classie.add( currentFld, 'hb-old' );
+		classie.add( previousFld, 'hb-previous' );
+
 		
 		if( !this.isLastStep ) {
 			// update nav
@@ -272,6 +275,9 @@
 			var nextField = this.fields[ this.current ];
 			classie.add( nextField, 'hb-current' );
 			classie.add( nextField, 'hb-show' );
+			classie.add( previousFld, 'hb-previous' );
+
+
 		}
 
 		// after animation ends remove added classes from fields
@@ -283,6 +289,7 @@
 				
 				classie.remove( self.fieldsList, 'hb-display-' + self.navdir );
 				classie.remove( currentFld, 'hb-hide' );
+
 
 				if( self.isLastStep ) {
 					// show the complete form and hide the controls

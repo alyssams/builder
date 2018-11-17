@@ -273,6 +273,8 @@ input[type="text"] +  label  {
     width:  100%;
     max-width: 600px;
     position: fixed;
+    margin-top: -88px;
+    margin-left: -5%;
 }
 
 .cs-skin-border.cs-active > span {
@@ -282,7 +284,7 @@ input[type="text"] +  label  {
 }
 
 .cs-skin-border .cs-options li span:hover, .cs-skin-border li.cs-focus span {
-    background: black;
+    background: #1CE783;
     color: white;
 }
 
@@ -532,14 +534,14 @@ div.cs-select {
     padding-top: 20px;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
      width: 1.3em;
     height: 1.3em;
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
     border: 1px solid #ddd;
-    /* -webkit-appearance: none; */
+    -webkit-appearance: none;
     outline: none;
     cursor: pointer;
     display: flex;
@@ -550,7 +552,7 @@ input[type="checkbox"] {
 
 .checkbox-round:checked {
     background-color: black;
-}
+} */
 
 #total, #total2 {
     display: block;
@@ -620,3 +622,81 @@ input[type="checkbox"] {
     position: absolute;
     right: 0;
 }
+
+.AddonButton {
+    padding-bottom: 25px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+@media (min-width: 768px) {
+    .AddonButton {
+        padding-bottom: 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+
+.AddonButton label {
+    display: inline-block;
+    max-width: 100%;
+    /* margin-bottom: 5px; */
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    text-align: justify;
+
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+.AddonButton svg {
+    width: 40px;
+    position: absolute;
+}
+
+.AddonButton__action-toggle {
+    display: none;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon g {
+    fill: #292c33;
+    stroke: #fff;
+}
+
+.AddonButton .AddIcon {
+    stroke: #aeb4bf;
+}
+
+.AddonButton .CheckmarkIcon circle {
+    stroke: #aeb4bf;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon circle {
+    stroke: #292c33;
+}
+
+.AddonButton .CheckmarkIcon path {
+    stroke: #868d9b;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon path {
+    stroke: #fff;
+}
+
+
+.hb-hide {
+    visibility: visible !important;
+    top: -80px;
+    position: relative !important;
+}
+
+
+

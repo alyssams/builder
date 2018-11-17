@@ -149,13 +149,44 @@
 							<form action="" id="pickmeboo">
 								<fieldset>
 									<div class="pickme">
-										<label>
-											<h2>Core + Live</h2>
-											<div class="price">$44.99/mo</div>
-										</label>
-										<input name="product" value="44.99" type="checkbox" id="p1" onclick="totalIt()" checked/>
+										<div id="core-live-add-on">
+											<div class="AddOnContent">
+												<h2>Core + Live</h2>
+												<div class="price">$44.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon-button" name="product" value="44.99" id="p1" class="AddonButton__action-toggle" onclick="totalIt()" checked>
+												<label for="addon-button">
+													<svg viewBox="0 0 32 32" class="CheckmarkIcon"><g fill="none" fill-rule="evenodd" stroke="#2DBD9D"><circle stroke-width="1.5" cx="16" cy="16" r="15.25"></circle><path stroke-width="1.5" d="M22 12l-8.317 8L10 16"></path></g></svg>
+												</label>
+											</div>
+										</div>
+										
+										<!-- <label>
+											<
+										</label> -->
+										<!-- <input name="product" value="44.99" type="checkbox" id="p1" onclick="totalIt()" checked/> -->
 									</div>
 									<p>GOES GREAT WITH THEE ADD-ONS</p>
+									<div class="pickme">
+										<h2>TEST</h2>
+
+										<div class="AddonButton">
+											<input type="checkbox" id="addon-button" class="AddonButton__action-toggle">
+											<label for="addon-button">
+												<svg width="40" height="40" viewBox="0 0 40 40" class="AddIcon">
+													<g fill="none" fill-rule="evenodd"><path d="M20 39.25c10.631 0 19.25-8.619 19.25-19.25S30.631.75 20 .75.75 9.369.75 20 9.369 39.25 20 39.25z" stroke-width="1.5"></path><path stroke-width="0" fill="#6B7790" d="M19.3 12v7.3H12v1.4h7.3V28h1.4v-7.3H28v-1.4h-7.3V12z"></path></g></svg>
+											</label>
+										</div>
+
+
+										<div class="AddonButton AddonButton--rollover">
+											<input type="checkbox" id="addon-button" class="AddonButton__action-toggle">
+											<label for="addon-button">
+												<svg viewBox="0 0 32 32" class="CheckmarkIcon"><g fill="none" fill-rule="evenodd" stroke="#2DBD9D"><circle stroke-width="1.5" cx="16" cy="16" r="15.25"></circle><path stroke-width="1.5" d="M22 12l-8.317 8L10 16"></path></g></svg>
+											</label>
+										</div>
+									</div>
 									<div class="pickme">
 										<label>
 											<h2>HBO</h2>

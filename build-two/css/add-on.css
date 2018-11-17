@@ -1,0 +1,144 @@
+
+
+.pickme .add-on {
+    display: flex;
+    position: relative;
+}
+
+.AddOnContent {
+    display: inline-block;
+    width: 330px;
+}
+
+.AddOnButton {
+    display: inline-block;
+    position: relative;
+}
+
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: '';
+    background:  url('../img/addme.svg') no-repeat;
+    background-position: center;
+    border: 1px solid #B8BECC;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    font-size: 1.2rem;
+    height: 40px;
+    vertical-align: middle;
+    color: black;
+    transition: .5ms;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 12px;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(1.5);
+}
+
+input[type=checkbox]:checked + label:before {
+  content: '';
+  background:  url('../img/youaddedme.svg') no-repeat;
+  background-position: center;
+  background-color: black;
+  border-color: black;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+
+/* #afterme {
+    position: fixed;
+    right: 190px;
+} */
+/* 
+.AddonButton {
+    padding-bottom: 25px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+@media (min-width: 768px) {
+    .AddonButton {
+        padding-bottom: 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+
+.AddonButton label {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    text-align: justify;
+
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+
+.AddonButton svg {
+    width: 40px;
+    position: absolute;
+}
+
+.AddonButton__action-toggle {
+    display: none;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon g {
+    fill: #292c33;
+    stroke: #fff;
+}
+
+.AddonButton .AddIcon {
+    stroke: #aeb4bf;
+}
+
+.AddonButton .CheckmarkIcon circle {
+    stroke: #aeb4bf;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon circle {
+    stroke: #292c33;
+}
+
+.AddonButton .CheckmarkIcon path {
+    stroke: #868d9b;
+}
+
+.AddonButton__action-toggle:checked+label .CheckmarkIcon path {
+    stroke: #fff;
+}
+ */

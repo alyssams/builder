@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hulu Plan Builder</title>
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="https://tympanus.net/Development/SelectInspiration/css/cs-skin-border.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/add-on.css">
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		
+		<!-- <div id="hola" class="animatedn fadeOut">
+			<div class="cometogether">
+				<span>
+					<h1>Hola!</h1>
+					<div class="line linegreen"></div>
+				</span>
+				<h2>Tell us what you're into, and we'll find the perfect Hulu Plan to match your taste.</h2>
+			</div>
+		</div> -->
+		<header class="Nav GlobalNav">
+			<div class="Container">
+				<div class="Nav__container">
+					<div class="Nav__item Nav__logo">
+						<a href="/" class="Nav__link">
+						<svg class="fill" viewBox="0 -2 61 24" height="24" width="61"><title>Hulu</title><path d="M9.57 6.241H6.47c-1.088 0-1.634.293-1.634.293V0H0v20h4.835v-8.07c0-.714.58-1.292 1.295-1.292h2.814c.716 0 1.295.578 1.295 1.292V20h4.836v-8.695c0-3.657-2.444-5.064-5.505-5.064zm46.48 0v8.07c0 .714-.579 1.292-1.294 1.292h-2.814a1.293 1.293 0 0 1-1.295-1.293V6.241H45.81v8.472c0 3.463 2.222 5.287 5.506 5.287h4.735v-.025c3.025 0 4.836-2.146 4.836-5.262V6.24H56.05zm-27.277 8.07c0 .714-.58 1.292-1.296 1.292h-2.813a1.293 1.293 0 0 1-1.296-1.293V6.241h-4.836v8.472c0 3.463 2.222 5.287 5.506 5.287h4.735v-.025c3.025 0 4.836-2.146 4.836-5.262V6.24h-4.836v8.07zM37.294 20h4.837V0h-4.837v20z" fill-rule="evenodd"></path></svg>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__live">
+						<a href="/" class="Nav__link">
+							<span class="Nav__label">Build Your Plan</span>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__live">
+						<a href="/" class="Nav__link">
+							<span class="Nav__label">Library</span>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__my-stuff">
+						<a href="/" class="Nav__link">
+							<span class="Nav__label">Features</span>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__search">
+						<a href="/" class="Nav__link">
+							<span class="Nav__label">Pricing</span>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__search">
+						<a href="/" class="Nav__link">
+							<span class="Nav__label">FAQS</span>
+						</a>
+					</div>
+					<div class="Nav__separator"></div>
+					<div class="Nav__item GlobalNav__search">
+						<a href="/search" class="Nav__link">
+							<span class="Nav__label">Log In</span>
+						</a>
+					</div>
+					<div class="Nav__item GlobalNav__search">
+						<a href="/search" class="Nav__link">
+							<span class="Nav__label">Start Your Free Trial</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="hb-form-wrap" id="hb-form-wrap">
+				<form id="planbuilder" class="hb-form hb-bull-full" autocomplete="off">
+					<ol class="hb-fields">
+						<li data-input-trigger>
+							<label class="hb-field-label hb-anim-upper">The way I like to watch is </label>
+							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
+								<option value="" disabled selected></option>
+								<option value="right" >I scroll through a guide and watch what’s on now. </option>
+								<option value="wrong">I search out whatever I want.</option>
+								<option value="right" >Typing what I want, but also watching whatever’s on (sometimes).</option>
+							</select>
+						</li>
+						<li id="secondquest" data-input-trigger>
+							<label class="hb-field-label hb-anim-upper">But, I gotta see</label>
+							<select  id="second-question" class="cs-select cs-skin-border hb-anim-lower">
+								<option value="" disabled selected></option>
+								<option value="right" >Sports — my teams need me</option>
+								<option value="right" >News - gotta stay informed.</option>
+								<option value="right" >Emmys, Grammys, Oscars, Tonys - EGOT all the way.</option>
+								<option value="wrong">Nothing. It’s 2019 - I watch on my time. </option>
+							</select>
+							
+						</li>
+						<li data-input-trigger>
+							<label class="hb-field-label hb-anim-upper">Ads are </label>
+							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
+								<option value="" disabled selected></option>
+								<option value="wrong">Fine, especially if I can save some money on Hulu.</option>
+								<option value="right" >Ok, as long as it’s for stuff I’m already interested in.</option>
+								<option value="right" >Not for me — I’d actually pay more not to see them.</option>
+							</select>
+						</li>
+						<li data-input-trigger>
+							<label class="hb-field-label hb-anim-upper">My must-sees are </label>
+							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
+								<option value="" disabled selected></option>
+								<option value="right" >Game of Thrones, Silicon Valley, Westworld, that sorta thing.</option>
+								<option value="right" >Whatever’s on HBO, MAX, Showtime, and Starz.</option>
+								<option value="wrong">Nothing fancy - I’m good with the basics.</option>
+							</select>
+						</li>
+						<li data-input-trigger>
+							<label class="hb-field-label hb-anim-upper">I need my streaming service to let me</label>
+							<select  id="question" class="cs-select cs-skin-border hb-anim-lower">
+								<option value="" disabled selected></option>
+								<option value="right">DVR entire seasons to watch over and over. </option>
+								<option value="right">Watch on any device.</option>
+								<option value="right">DVR and watch on any device</option>
+								<option value="wrong">Watch shows, movies, and my budget.</option>
+							</select>
+						</li>
+					</ol><!-- /hb-fields -->
+					
+					<div id="scoreDisplay">score goes here</div>
+					<div class="resultsarein">
+						<div id="filler">
+							<div class="firstFiller">
+								<h1>Now ruining TV for you...</h1>
+							</div>
+							<!-- <div class="secondFiller">
+								<h1>Multiple Screens</h1>
+							</div>	 -->	
+						</div>
+						<div id="vip">
+							<div class="front">
+								<div class="theplan">
+									<h3>BEST PLAN FOR YOU</h3>
+									<div class="money">
+										<h3>CORE + LIVE</h3>
+										<div class="price">$44.99/mo</div>
+										<ul>
+											<li><img src="img/check.svg"/>Watch on all your favorite devices</li>
+											<li><img src="img/check.svg"/>Unlimited acess to streaming library</li>
+											<li><img src="img/check.svg"/>Award-winning Hulu originals</li>
+											<li><img src="img/check.svg"/>Up to 6 user profilese</li>
+											<li><img src="img/check.svg"/>Switch plans or cancel anytime</li>
+											<li><img src="img/check.svg"/>Live sports, live events, breaking newse</li>
+										</ul>
+									</div>
+									<h3 class="tryagain">Not for you? <a href="/" title="">Try again</a> or <a href="/plans.html" title="">see all plans</a></h3>
+								</div>
+							</div>
+							<div class="addremove">
+							<form action="" id="pickmeboo">
+								<fieldset>
+									<div class="pickme">
+										<div id="core-live-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Core + Live</h2>
+												<div class="price">$44.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon1" name="product" value="44.99" onclick="totalIt()" checked/>
+  												<label for="addon1"></label>
+												 
+											</div>
+										</div>
+									</div>
+									<p>GOES GREAT WITH THEE ADD-ONS</p>
+
+									<div class="pickme">
+										<div id="core-hbo-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>HBO</h2>
+												<p>Add HBO to watch some of the most talked about shows on television including Game of Thrones, Westworld, Insecure, and Silicon Valley. Plus, stream the latest hit movies like Wonder Woman and family favorite series Sesame Street.</p>
+												<div class="price">$14.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon2" name="product" value="14.99" onclick="totalIt()"/>
+  												 <label for="addon2"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-showtime-add-on" class="add-on">
+											<div class="AddOnContent">
+											<h2>SHOWTIME</h2>
+											<p>Watch award-winning series like Shameless, Homeland, and Billions. Plus, enjoy exclusive movies, sports, comedy, documentaries, and more - all commercial free.</p>
+											<div class="price">$10.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon3" name="product" value="10.99" onclick="totalIt()"/>
+  												 <label for="addon3"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-cinemax-add-on" class="add-on">
+											<div class="AddOnContent">
+											<h2>CINEMAX</h2>
+											<p>Add Cinemax to get hit movies like Sully, Jason Bourne, and The Mummy, as well as action-packed original series like Strike Back, Outcast, or Banshee, and more.</p>
+											<div class="price">$9.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon4" name="product" value="9.99" onclick="totalIt()"/>
+  												 <label for="addon4"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-starz-add-on" class="add-on">
+											<div class="AddOnContent">
+											<h2>STARZ</h2>
+											<p>STARZ is the ultimate destination for obsessable TV, movies and more. From bold Original Series to the best movies, whatever you love, STARZ ignites your passions.</p>
+											<div class="price">$10.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon5" name="product" value="10.99" onclick="totalIt()"/>
+  												 <label for="addon5"></label>
+											</div>
+										</div>
+									</div>
+									
+									<div class="pickme">
+										<div id="core-screens-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Unlimited Screens</h2>
+												<p>Upgrade to watch on unlimited screens at home - enjoy three on the go.</p>
+												<div class="price">$14.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon6" name="product" value="14.99" onclick="totalIt()"/>
+  												 <label for="addon6"></label>
+											</div>
+										</div>
+									</div>
+									<p>OTHER AVAILABLE ADD-ONS</p>
+									<div class="pickme">
+										<div id="core-dvr-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Enhanced Cloud DVR</h2>
+												<p>Upgrade Cloud DVR to 200 hours. Plus, fast-forward through commercials and enjoy no limit on simultaneous recordings. Stream your recordings anywhere on supported devices.</p>
+												<div class="price">$14.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon7" name="product" value="14.99" onclick="totalIt()"/>
+  												 <label for="addon7"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-entertainment-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Entertainment Add-On</h2>
+												<div class="price">$7.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon8" name="product" value=7.99" onclick="totalIt()"/>
+  												 <label for="addon8"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-spanish-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Espanol Add-On</h2>
+												<div class="price">$4.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon9" name="product" value=14.99" onclick="totalIt()"/>
+  												 <label for="addon9"></label>
+											</div>
+										</div>
+									</div>
+								<fieldset>
+							</form>
+						</div>
+						<div class="stickyTotal GlobalNav">
+							<div class="front"></div>
+							<div class="addremove">
+								<ul>
+									<li>
+										<label>Total<input value="$44.99" readonly="readonly" type="text" id="total"/></label>
+									</li>
+									<li><a class="btn" href="#" title="">Select This Package</a></li>
+								</ul>
+							</div>
+						</div>
+						</div>
+						<div id="basic">
+							<div class="front">
+								<div class="theplan">
+									<h3>BEST PLAN FOR YOU</h3>
+									<div class="money">
+										<h3>CORE</h3>
+										<div class="price">$5.99/mo</div>
+										<ul>
+											<li><img src="img/check.svg"/>Watch on all your favorite devices</li>
+											<li><img src="img/check.svg"/>Unlimited acess to streaming library</li>
+											<li><img src="img/check.svg"/>Award-winning Hulu originals</li>
+											<li><img src="img/check.svg"/>Up to 6 user profilese</li>
+											<li><img src="img/check.svg"/>Switch plans or cancel anytime</li>
+										</ul>
+									</div>
+									<h3 class="tryagain">Not for you? <a href="/" title="">Try again</a> or <a href="/plans.html" title="">see all plans</a></h3>
+								</div>
+							</div>
+							<div class="addremove">
+							<form action="" id="pickmeboo">
+								<fieldset>
+									<div class="pickme">
+										<div id="core-basic-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>Core</h2>
+												<div class="price">$5.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon10" name="productBasic" value="5.99" onclick="totalItBasic()" checked/>
+  												<label for="addon10"></label>
+												 
+											</div>
+										</div>
+									</div>
+									<p>GOES GREAT WITH THEE ADD-ONS</p>
+									<div class="pickme">
+										<div id="core-hbo-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>HBO</h2>
+												<p>Add HBO to watch some of the most talked about shows on television including Game of Thrones, Westworld, Insecure, and Silicon Valley. Plus, stream the latest hit movies like Wonder Woman and family favorite series Sesame Street.</p>
+												<div class="price">$14.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon11" name="productBasic" value="14.99" onclick="totalItBasic()"/>
+  												 <label for="addon11"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-showtime-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>SHOWTIME</h2>
+												<p>Watch award-winning series like Shameless, Homeland, and Billions. Plus, enjoy exclusive movies, sports, comedy, documentaries, and more - all commercial free.</p>
+												<div class="price">$10.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon12" name="productBasic" value="10.99" onclick="totalItBasic()"/>
+  												 <label for="addon12"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-cinemax-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>CINEMAX</h2>
+												<p>Add Cinemax to get hit movies like Sully, Jason Bourne, and The Mummy, as well as action-packed original series like Strike Back, Outcast, or Banshee, and more.</p>
+												<div class="price">$9.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon13" name="productBasic" value="9.99" onclick="totalItBasic()"/>
+  												 <label for="addon13"></label>
+											</div>
+										</div>
+									</div>
+									<div class="pickme">
+										<div id="core-starz-add-on" class="add-on">
+											<div class="AddOnContent">
+												<h2>STARZ</h2>
+												<p>STARZ is the ultimate destination for obsessable TV, movies and more. From bold Original Series to the best movies, whatever you love, STARZ ignites your passions.</p>
+												<div class="price">$10.99/mo</div>
+											</div>
+											<div class="AddonButton">
+												<input type="checkbox" id="addon14" name="productBasic" value="10.99" onclick="totalItBasic()"/>
+  												 <label for="addon14"></label>
+											</div>
+										</div>
+									</div>
+								<fieldset>
+							</form>
+						</div>
+						<div class="stickyTotal GlobalNav">
+							<div class="front"></div>
+							<div class="addremove">
+								<ul>
+									<li>
+										<label>Total<input value="$5.99" readonly="readonly" type="text" id="total2"/></label>
+									</li>
+									<li><a class="btn" href="#" title="">Select This Package</a></li>
+								</ul>
+							</div>
+						</div>
+						</div>
+
+					</div>
+				</form><!-- /hb-form -->
+			</div><!-- /hb-form-wrap -->
+			<!-- <div class="tellmemore">
+						<p>Whoa, whoa, whoa. <a href="/" title="Tell me more about Hulu.">Tell me more about Hulu.</a></p>
+			</div> -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/selectFx.js"></script>
+		<script src="js/builder.js"></script>
+		<script>
+			(function() {
+				var formWrap = document.getElementById( 'hb-form-wrap' );
+					[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+					new SelectFx( el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+						}
+					});
+				} );
+				new huluBuilder( formWrap, {
+					onReview : function() {
+						classie.add( document.body, 'overview' ); 
+						setTimeout(function(){
+						 document.getElementById("filler").className = "animated fadeOut";
+						  document.getElementById("filler").style.display = "none"; 
+						 },5000);
+					}
+				} );
+			})();
+			function totalIt() {
+				var input = document.getElementsByName("product");
+				var total = 0;
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].checked) {
+					total += parseFloat(input[i].value);
+					}
+				}
+				document.getElementById("total").value = "$" + total.toFixed(2);
+			}
+			function totalItBasic() {
+				var input = document.getElementsByName("productBasic");
+				var total = 0;
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].checked) {
+					total += parseFloat(input[i].value);
+					}
+				}
+				document.getElementById("total2").value = "$" + total.toFixed(2);
+			}
+			// document.getElementById("hola").className = "animated fadeOut";
+			// setTimeout(function(){
+			//  document.getElementById("hola").className = "animated fadeOut";
+			//   document.getElementById("hola").style.display = "none"; 
+			//  },5000);
+
+
+
+		</script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+			$('<label id="afterme" class="hb-field-label hb-anim-upper">as it happens.</label>').appendTo($('#secondquest'));
+
+
+		</script>
+	</body>
+</html>

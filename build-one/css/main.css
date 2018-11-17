@@ -79,6 +79,96 @@ a:hover, a:focus {
  */
 
 
+#hola {
+    width:  100%;
+    height:  100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cometogether {
+    width: 100%;
+    max-width: 800px;
+    /* position: relative; */
+}
+
+.cometogether span {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.line {
+    height: 70px;
+    margin-bottom: 10px;
+    width: 0%;
+    animation: 1s ease-out 0s 1 slideInFromLeft forwards;
+    position: absolute;
+    top: 70px;
+    z-index: 0;
+    width: 100px;
+/*       animation:slideInFromLeft 1.5s;
+      animation-timing-function:linear;
+      animation-delay:1s;
+      animation-fill-mode:forwards;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation:slideInFromLeft 1.5s;
+      -webkit-animation-timing-function:linear;
+      -webkit-animation-delay:1s;
+      -webkit-animation-fill-mode: forwards; */
+    z-index: 2;
+    background: #1CE783;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+   width:  100%;
+  }
+}
+
+#hola h1, h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#hola h1 {
+    font-size: 10rem;
+    line-height: 10rem;
+    position: relative;
+    z-index: 9;
+}
+
+#hola h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    display: block;
+}
+
+ .animated {
+  animation-duration: 5s; // 1s from source
+  animation-fill-mode: both;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  95% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+
+
  /* NAV */
 
 .GlobalNav {
@@ -180,6 +270,9 @@ input[type="text"] +  label  {
 .cs-skin-border .cs-options {
     color: black;
     font-size: 1.4rem;
+    width:  100%;
+    max-width: 600px;
+    position: fixed;
 }
 
 .cs-skin-border.cs-active > span {
@@ -218,6 +311,7 @@ div.cs-skin-border {
 
 div.cs-skin-border {
 	display: inline-block;
+    font-size: 2rem;
 }
 
 .hb-bull-full {
@@ -269,6 +363,10 @@ div.cs-select {
 }
 
 /* results */
+
+#vip, #basic, .vip, .basic {
+    display: none;
+}
 
 .resultsarein {
     width: 100%;
@@ -359,10 +457,28 @@ div.cs-select {
     position: relative;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#pickmeboo {
+    width: 100%;
+    height: 99%;
+    border: 1px solid blue;
+    overflow: auto;
+    padding-right: 15px;
+}
+
 .addremove fieldset {
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
+}
+
+.addremove .pickme p {
+    text-align: left;
+    margin-top: 20px;
 }
 
 .addremove fieldset p {
@@ -393,6 +509,7 @@ div.cs-select {
 .pickme h2 {
     font-size: 20px;
     line-height: 21px;
+    text-align: left;
 }
 
 .pickme .price {
@@ -435,7 +552,7 @@ input[type="checkbox"] {
     background-color: black;
 }
 
-#total {
+#total, #total2 {
     display: block;
     background: transparent;
     border: 0;
@@ -497,4 +614,9 @@ input[type="checkbox"] {
     font-family: 'graphik-semibold';
     margin: 0;
 
+}
+
+#afterme {
+    position: absolute;
+    right: 0;
 }
